@@ -1,8 +1,20 @@
 # KaTeX4Typecho
 
+<a name="eng" href="#chs"> 中文 </a>
+
 A plugin providing [LaTeX](http://www.latex-project.org/ "LaTeX") equation support for [Typecho](https://github.com/typecho/typecho "Typecho")
 
 > This plugin is based on [KaTeX](https://github.com/Khan/KaTeX "KaTeX")
+
+## Have a Show
+
+* inline mode
+
+An inline equation $$ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) $$
+
+* standalone mode
+
+\[ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) \]
 
 ## How It Works
 
@@ -63,8 +75,20 @@ Having any suggestions or other feedbacks, feel free to contact me through [GitH
 ---
 ---
 
+<a name="chs" href="#eng"> English </a>
+
 这是一个为 [Typecho](https://github.com/typecho/typecho "Typecho") 提供 [LaTeX](http://www.latex-project.org/ "LaTeX") 公式支持的插件。
 > 本项目基于 [KaTeX](https://github.com/Khan/KaTeX "KaTeX")
+
+## 展示一下
+
+* 行内模式
+
+一个行内公式 $$ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) $$
+
+* 独立模式
+
+\[ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) \]
 
 ## 工作原理
 
