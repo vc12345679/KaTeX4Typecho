@@ -67,7 +67,7 @@ Another example, with the theme "**[Theme.Material](https://github.com/viosey/ty
 
 ## Suggestions
 
-Having any suggestions or other feedbacks, feel free to contact me through [GitHub](https://github.com/vc12345679/) or [Email](mailto:chensiwei1990@gmail.com) or [Blog](https://blog.chensiwei.net.cn/archives/6.html).
+Having any suggestions or other feedbacks, feel free to contact me through [GitHub](https://github.com/vc12345679/) or [Email](mailto:chensiwei1990@gmail.com) or [Blog](https://blog.chensiwei.space/archives/6.html).
 
 > MIT License.
 > Copyright (c) 2016 vc12345679
@@ -141,7 +141,7 @@ KaTeX4Typecho 获取博客文章所在的HTML元素，然后通过 KaTeX 对文�
 
 ## 建议
 
-如果有什么建议或者其他反馈，请不吝赐教，[GitHub](https://github.com/vc12345679/) 或者 [电子邮件](mailto:chensiwei1990@gmail.com) 或者 [Blog](https://blog.chensiwei.net.cn/archives/6.html) 均可。
+如果有什么建议或者其他反馈，请不吝赐教，[GitHub](https://github.com/vc12345679/) 或者 [电子邮件](mailto:chensiwei1990@gmail.com) 或者 [Blog](https://blog.chensiwei.space/archives/6.html) 均可。
 
 > MIT License.
 > Copyright (c) 2016 vc12345679
