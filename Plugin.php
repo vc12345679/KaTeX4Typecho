@@ -66,9 +66,9 @@ class KaTeX4Typecho_Plugin implements Typecho_Plugin_Interface {
     public static function header() {
 	    $settings = Helper::options()->plugin('KaTeX4Typecho');
 		echo<<<EOF
-<script type="text/javascript" src="http://cdn.bootcss.com/KaTeX/0.6.0/katex.min.js"></script>
-<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css" />
-<script type="text/javascript" src="http://cdn.bootcss.com/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/KaTeX/0.6.0/katex.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css" />
+<script type="text/javascript" src="https://cdn.bootcss.com/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
 EOF;
     }
 
