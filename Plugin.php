@@ -40,7 +40,7 @@ class KaTeX4Typecho_Plugin implements Typecho_Plugin_Interface {
      * @return void
      */
 	public static function config(Typecho_Widget_Helper_Form $form) {
-		$delimiter = new Typecho_Widget_Helper_Form_Element_Text('delimiter', NULL, _t('{left: "$$", right: "$$", display: true},{left: "\\\\[", right: "\\\\]", display: true},{left: "$", right: "$", display: false},{left: "\\\\(", right: "\\\\)", display: false}'), _t('公式标识符 Delimiters for equations:'), _t('输入识别公式所用的标识符，每个{}内为一组，left 后为左标识符，right 后为右标识符,display 后 true 表示段落模式，false 表示行内模式。Input the DELIMITERS for recognizing equations. Each {} for a set. "left" means left delimiter. "right" means right delimiter. In "display", "true" means standalone mode; “false” means inline mode.'));
+		$delimiter = new Typecho_Widget_Helper_Form_Element_Text('delimiter', NULL, _t('{left: "$$", right: "$$", display: false},{left: "\\\\[", right: "\\\\]", display: true}'), _t('公式标识符 Delimiters for equations:'), _t('输入识别公式所用的标识符，每个{}内为一组，left 后为左标识符，right 后为右标识符,display 后 true 表示段落模式，false 表示行内模式。Input the DELIMITERS for recognizing equations. Each {} for a set. "left" means left delimiter. "right" means right delimiter. In "display", "true" means standalone mode; “false” means inline mode.'));
         $form->addInput($delimiter);
 		$ignoredtag = new Typecho_Widget_Helper_Form_Element_Text('ignoredtag', NULL, _t('"script", "noscript", "style", "textarea", "pre", "code"'), _t('忽略的标签 Ignored Tags:'), _t('输入禁止公式渲染的标签。Input the IGNORED TAGS for KaTeX rendering.'));
         $form->addInput($ignoredtag);
