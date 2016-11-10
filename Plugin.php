@@ -40,15 +40,10 @@ class KaTeX4Typecho_Plugin implements Typecho_Plugin_Interface {
      * @return void
      */
 	public static function config(Typecho_Widget_Helper_Form $form) {
-		$getType = new Typecho_Widget_Helper_Form_Element_Select('getType', array('Id' => 'Id',
-            'TagName' => 'TagName',
-            'ClassName' => 'ClassName',
-            'Name' => 'Name'), 'ClassName', _t('文章内容获取方式 Working type of getting element:'), _t('JS获取文章内容所在元素时采用的选取方式。默认主题时采用 ClassName 。The type by which Js would get the element containing post content. Use ClassName under default theme.'));
-        $form->addInput($getType);
-
-
-		$getName = new Typecho_Widget_Helper_Form_Element_Text('getName', NULL, _t('post-content'), _t('文章内容获取关键字 Keyword for getting element:'), _t('输入JS获取文章内容所在元素时采用的关键字。默认主题时采用 post-content 。Input the KEYWORD when JS gets the element containing post content. Use post-content under default theme.'));
-        $form->addInput($getName);
+		$delimiter = new Typecho_Widget_Helper_Form_Element_Text('Delimiters', NULL, _t('{left: "$$", right: "$$", display: true},{left: "\\\\[", right: "\\\\]", display: true},{left: "$", right: "$", display: false},{left: "\\\\(", right: "\\\\)", display: false}'), _t('公式标识符 Delimiters for equations:'), _t('输入识别公式所用的标识符，每个{}内为一组，left 后为左标识符，right 后为右标识符,display 后 true 表示段落模式，false 表示行内模式。Input the DELIMITERS for recognizing equations. Each {} for a set. "left" means left delimiter. "right" means right delimiter. In "display", "true" means standalone mode; “false” means inline mode.'));
+        $form->addInput($delimiter);
+		$ignoredtag = new Typecho_Widget_Helper_Form_Element_Text('IgnoredTags', NULL, _t('"script", "noscript", "style", "textarea", "pre", "code"'), _t('忽略的标签 Ignored Tags:'), _t('输入禁止公式渲染的标签。Input the IGNORED TAGS for KaTeX rendering.'));
+        $form->addInput($ignoredtag);
     }
 
     /**
@@ -70,11 +65,11 @@ class KaTeX4Typecho_Plugin implements Typecho_Plugin_Interface {
      */
     public static function header() {
 	    $settings = Helper::options()->plugin('KaTeX4Typecho');
-	    $currentPath = Helper::options()->pluginUrl . '/KaTeX4Typecho/';
-
-	    echo '<script type="text/javascript" src="' . $currentPath . 'katex/katex.min.js"></script>' . "\n";
-        echo '<link rel="stylesheet" type="text/css" href="' . $currentPath . 'katex/katex.min.css" />' . "\n";
-        echo '<script type="text/javascript" src="' . $currentPath . 'katex/contrib/auto-render.min.js"></script>' . "\n";
+		echo<<<EOF
+<script type="text/javascript" src="http://cdn.bootcss.com/KaTeX/0.6.0/katex.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css" />
+<script type="text/javascript" src="http://cdn.bootcss.com/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
+EOF;
     }
 
      /**
@@ -86,25 +81,10 @@ class KaTeX4Typecho_Plugin implements Typecho_Plugin_Interface {
      */
     public static function footer() {
 	    $settings = Helper::options()->plugin('KaTeX4Typecho');
-	    echo <<<EOF
-<script type="text/javascript">
-	renderMathInElement(
-		
-EOF;
-		if($settings->getType == "Id")
-			echo 'document.getElementById("' . $settings->getName . '")';
-		else
-			echo 'document.getElementsBy' . $settings->getType . '("' . $settings->getName . '")[0]';
-		echo <<<EOF
-,{
-            delimiters:[
-                {left: "$$", right: "$$", display: false},
-                {left: "\\[", right: "\\]", display: true},
-            ]
-        }
-    );
-</script>
-EOF;
-	    echo "\n";
+		echo '<script type="text/javascript">renderMathInElement(document.body,{delimiters:[';
+		echo $settings->delimiter;
+		echo '],ignoredTags:[';
+		echo $settings->ignoredtag;
+		echo ']});</script>\n';
     }
 }
