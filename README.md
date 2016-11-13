@@ -74,7 +74,7 @@ This area indicates which tags will be ignored during the process of rendering. 
 
 ### Suggestions
 
-Having any suggestions or other feedbacks, feel free to contact me through [GitHub](https://github.com/vc12345679/) or [Email](mailto:chensiwei1990@gmail.com) or [Blog](https://blog.chensiwei.space/archives/6.html).
+Having any suggestions or other feedbacks, feel free to contact me through [GitHub](https://github.com/vc12345679/) or [Email](mailto:chensiwei1990@gmail.com) or [Blog](https://blog.chensiwei.space/blog/katex4typecho.html).
 
 > MIT License.
 > Copyright (c) 2016 vc12345679
@@ -82,6 +82,7 @@ Having any suggestions or other feedbacks, feel free to contact me through [GitH
 ---
 ---
 
+## 
 <a name="chs" href="#eng"> English </a>
 
 这是一个为 [Typecho](https://github.com/typecho/typecho "Typecho") 提供 [LaTeX](http://www.latex-project.org/ "LaTeX") 公式支持的插件。
@@ -136,7 +137,7 @@ KaTeX4Typecho 使用 KaTeX 渲染整个页面。
 
 ### 建议
 
-如果有什么建议或者其他反馈，请不吝赐教，[GitHub](https://github.com/vc12345679/) 或者 [电子邮件](mailto:chensiwei1990@gmail.com) 或者 [Blog](https://blog.chensiwei.space/archives/6.html) 均可。
+如果有什么建议或者其他反馈，请不吝赐教，[GitHub](https://github.com/vc12345679/) 或者 [电子邮件](mailto:chensiwei1990@gmail.com) 或者 [Blog](https://blog.chensiwei.space/blog/katex4typecho.html) 均可。
 
 > MIT License.
 > Cgopyright (c) 2016 vc12345679
