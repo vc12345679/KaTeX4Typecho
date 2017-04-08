@@ -29,11 +29,11 @@ A plugin providing [LaTeX](http://www.latex-project.org/ "LaTeX") equation suppo
 
 * inline mode
 
-An inline equation $$ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) $$
+An inline equation $$ \sum_{k=1}^n k^2 = \frac{1}{6} n (n+1) (2n+1)$$
 
 * standalone mode
 
-\[ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) \]
+\[ \sum_{k=1}^n k^2 = \frac{1}{6} n (n+1) (2n+1) \]
 
 ### How It Works
 
@@ -92,11 +92,11 @@ Having any suggestions or other feedbacks, feel free to contact me through [GitH
 
 * 行内模式
 
-一个行内公式 $$ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) $$
+一个行内公式 $$ \sum_{k=1}^n k^2 = \frac{1}{6} n (n+1) (2n+1) $$
 
 * 独立模式
 
-\\[ \sum_{k=1}^n k^2 = \frac{1}{2} n (n+1) \\]
+\\[ \sum_{k=1}^n k^2 = \frac{1}{6} n (n+1) (2n+1) \\]
 
 ### 工作原理
 
