@@ -1,6 +1,6 @@
 # KaTeX4Typecho
 
-** 已停止维护 **
+> **已停止维护**
 
 ## New Features
 ### v0.2
